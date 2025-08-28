@@ -14,7 +14,7 @@ class Splashview extends StatefulWidget {
 class _SplashviewState extends State<Splashview> {
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
           return Homeview();
