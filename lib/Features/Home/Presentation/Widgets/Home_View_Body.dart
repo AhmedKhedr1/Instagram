@@ -19,15 +19,17 @@ class HomeViewBody extends StatelessWidget {
             child: Stories_ListView(),
           ),
           SliverToBoxAdapter(
-            child: Column(
-              children: [
-                Divider(
-                  color: Color(0xff25292E),
-                ),
-                Post()
-              ],
+            child: Divider(
+              color: Color(0xff25292E),
             ),
-          )
+          ),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+            childCount: 3,
+            (context, index) {
+              return Post();
+            },
+          ))
         ],
       ),
     );

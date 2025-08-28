@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
-import 'package:instagram/Core/utils/Styless.dart';
-import 'package:instagram/Features/Home/Presentation/Widgets/User_Avatar.dart';
+import 'package:instagram/Features/Home/Presentation/Widgets/PostBars.dart';
 
 class Post extends StatelessWidget {
   const Post({super.key});
@@ -9,37 +8,45 @@ class Post extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 7),
-          child: Row(
+          child: PostTopBar(),
+        ),
+        SizedBox(
+          width: double.infinity,
+          height: 385,
+          child: Image.asset(
+            Assets.postiamge1,
+            fit: BoxFit.cover,
+          ),
+          
+        ),
+        PostBottomBar(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
             children: [
-              User_Avatar(
-                Fpadding: 1.5,
-                Spadding: 3,
-                imageraduis: 16,
-                colors: [
-                  Color(0xffF4CC00),
-                  Color(0xffFF1557),
-                  Color(0xffCE03C8)
-                ],
-                Avatar_image: Assets.user10image,
+              RichText(
+                text: const TextSpan(
+                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  children: [
+                    TextSpan(
+                      text: "mostafa_js",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    TextSpan(
+                      text:
+                          "Mesmerizing colors and graceful movements! This tropical bird truly embodies the beauty of nature’s...",
+                    ),
+                    TextSpan(
+                      text: " more",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(
-                width: 8,
-              ),
-              Text(
-                'mostafa_js',
-                style: Styless.headlineRegular
-                    .copyWith(fontWeight: FontWeight.w500),
-              ),
-              Spacer(),
-              Image.asset(
-                Assets.options_icon,
-                color: Colors.white,
-                height: 24,
-                width: 24,
-              )
             ],
           ),
         )

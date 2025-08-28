@@ -28,6 +28,7 @@ class Stories_ListView extends StatelessWidget {
         height: 134,
         width: double.infinity,
         child: ListView.builder(
+          shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: stories.length,
           itemBuilder: (context, index) {
