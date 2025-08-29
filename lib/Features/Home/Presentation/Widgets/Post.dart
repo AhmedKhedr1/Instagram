@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/PostBars.dart';
+import 'package:instagram/Features/Home/data/models/post_Model.dart';
 
 class Post extends StatelessWidget {
-  const Post({super.key});
-
+  const Post({super.key, required this.postModel});
+  final PostModel postModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,38 +13,43 @@ class Post extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 7),
-          child: PostTopBar(),
+          child: PostTopBar(
+            postModel: postModel,
+          ),
         ),
         SizedBox(
           width: double.infinity,
           height: 385,
           child: Image.asset(
-            Assets.postiamge1,
+            postModel.image,
             fit: BoxFit.cover,
           ),
-          
         ),
-        PostBottomBar(),
+        PostBottomBar(
+          postModel: postModel,
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Column(
             children: [
               RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   style: TextStyle(color: Colors.white, fontSize: 14),
                   children: [
                     TextSpan(
-                      text: "mostafa_js",
+                      text: postModel.user_name,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text:
-                          "Mesmerizing colors and graceful movements! This tropical bird truly embodies the beauty of nature’s...",
+                      text: '  ',
                     ),
                     TextSpan(
-                      text: " more",
-                      style: TextStyle(color: Colors.grey),
+                      text: postModel.description,
                     ),
+                    // TextSpan(
+                    //   text: " more",
+                    //   style: TextStyle(color: Colors.grey),
+                    // ),
                   ],
                 ),
               ),

@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Core/utils/Styless.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/User_Avatar.dart';
+import 'package:instagram/Features/Home/data/models/post_Model.dart';
 
 class PostTopBar extends StatelessWidget {
   const PostTopBar({
-    super.key,
+    super.key, required this.postModel,
   });
-
+final PostModel postModel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,13 +23,13 @@ class PostTopBar extends StatelessWidget {
             Color(0xffFF1557),
             Color(0xffCE03C8)
           ],
-          Avatar_image: Assets.user10image,
+          Avatar_image: postModel.user_image,
         ),
         SizedBox(
           width: 8,
         ),
         Text(
-          'mostafa_js',
+          postModel.user_name,
           style: Styless.headlineRegular
               .copyWith(fontWeight: FontWeight.w500),
         ),
@@ -46,9 +47,9 @@ class PostTopBar extends StatelessWidget {
 
 class PostBottomBar extends StatelessWidget {
   const PostBottomBar({
-    super.key,
+    super.key, required this.postModel,
   });
-
+final PostModel postModel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -61,7 +62,7 @@ class PostBottomBar extends StatelessWidget {
               size: 24,
             )),
         Text(
-          '1.150',
+          postModel.NumOfLikes,
           style: Styless.calloutBold,
         ),
         SizedBox(
@@ -75,7 +76,7 @@ class PostBottomBar extends StatelessWidget {
           ),
         ),
         Text(
-          '58',
+          postModel.NumOfComments,
           style: Styless.calloutBold,
         ),
         SizedBox(
@@ -89,7 +90,7 @@ class PostBottomBar extends StatelessWidget {
           ),
         ),
         Text(
-          '7',
+          postModel.NumOfSend,
           style: Styless.calloutBold,
         ),
         Spacer(),

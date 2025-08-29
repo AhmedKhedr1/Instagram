@@ -23,7 +23,8 @@ abstract class Assets {
   static const String options_icon = 'assets/images/Options.png';
   static const String postiamge1 = 'assets/images/postiamge1.png';
   static const String postiamge2 = 'assets/images/postiamge2.png';
-  static const String postiamge3 = 'assets/images/postiamge3.png';
+  static const String postiamge3 = 'assets/images/postimage3.png';
+  static const String postiamge4 = 'assets/images/postimage4.png';
   static const String comment_icon = 'assets/images/Comment.png';
   static const String Save_icon = 'assets/images/Save.png';
 }
