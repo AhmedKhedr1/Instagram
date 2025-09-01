@@ -13,9 +13,9 @@ class HomeViewBody extends StatelessWidget {
     List<PostModel> posts = [
       PostModel(
         image: Assets.postiamge1,
-        user_name: "ahmed_dev",
-        user_image: Assets.user2image,
-        description: "Mesmerizing colors of nature 🌈🐦",
+        user_name: "khaled.pro",
+        user_image: Assets.user8image,
+        description: "Mesmerizing colors of nature  🐦🐦",
         NumOfLikes: '540',
         NumOfComments: '42',
         NumOfSend: '10',

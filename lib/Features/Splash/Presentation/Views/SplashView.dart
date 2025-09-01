@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:instagram/Constant.dart';
 import 'package:instagram/Core/utils/Assets.dart';
+import 'package:instagram/Features/Auth/presentation/Views/SigninView.dart';
 import 'package:instagram/Features/Home/Presentation/Views/HomeView.dart';
 
 class Splashview extends StatefulWidget {
@@ -17,7 +19,7 @@ class _SplashviewState extends State<Splashview> {
     Timer(const Duration(seconds: 2), () {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
-          return Homeview();
+          return Signinview();
         },
       ));
     });
@@ -26,7 +28,7 @@ class _SplashviewState extends State<Splashview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff162127),
+      backgroundColor: KPrimaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
