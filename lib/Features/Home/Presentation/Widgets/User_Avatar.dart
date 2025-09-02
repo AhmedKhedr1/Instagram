@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:instagram/Core/utils/Assets.dart';
 
 class User_Avatar extends StatelessWidget {
   const User_Avatar({

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/Constant.dart';
 import 'package:instagram/Core/utils/Assets.dart';
+import 'package:instagram/Features/Auth/presentation/Widgets/Custom_Button.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_TextField.dart';
 
 class SignviewBody extends StatelessWidget {
@@ -9,7 +11,8 @@ class SignviewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Center(
-        child: Column(
+        child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             Align(
               alignment: Alignment.topLeft,
@@ -24,7 +27,7 @@ class SignviewBody extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 120),
+              padding: const EdgeInsets.only(top: 94),
               child: SizedBox(
                 height: 68,
                 child: Image.asset(Assets.instagramlogo),
@@ -35,14 +38,50 @@ class SignviewBody extends StatelessWidget {
             ),
             Custom_TextField(
               hinttext: 'Username,email address or mobile number',
+              keyboardType: TextInputType.emailAddress,
             ),
             SizedBox(
               height: 12,
             ),
             Custom_TextField(
               hinttext: 'Password',
+              keyboardType: TextInputType.visiblePassword,
             ),
-            Spacer(),
+            SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CustomButton(
+                text: 'Log in ',
+                textcolor: Colors.white,
+                buttoncolor: Color(0xff0064E0),
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Center(
+              child: Text(
+                'Forgotten password?',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            SizedBox(
+              height: 180,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: CustomButton(
+                text: 'Create new account',
+                textcolor: Color(0xff6391D1),
+                buttoncolor: KPrimaryColor,
+                SideColor: Color(0xff6391D1),
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
             SizedBox(
                 width: 77,
                 height: 39,
