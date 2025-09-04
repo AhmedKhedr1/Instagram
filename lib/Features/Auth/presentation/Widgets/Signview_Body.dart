@@ -3,6 +3,7 @@ import 'package:instagram/Constant.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_Button.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_TextField.dart';
+import 'package:instagram/Features/Home/Presentation/Views/HomeView.dart';
 
 class SignviewBody extends StatelessWidget {
   const SignviewBody({super.key});
@@ -56,6 +57,13 @@ class SignviewBody extends StatelessWidget {
                 text: 'Log in ',
                 textcolor: Colors.white,
                 buttoncolor: Color(0xff0064E0),
+                onpressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) {
+                      return Homeview();
+                    },
+                  ));
+                },
               ),
             ),
             SizedBox(
@@ -77,6 +85,7 @@ class SignviewBody extends StatelessWidget {
                 textcolor: Color(0xff6391D1),
                 buttoncolor: KPrimaryColor,
                 SideColor: Color(0xff6391D1),
+                onpressed: () {},
               ),
             ),
             SizedBox(
