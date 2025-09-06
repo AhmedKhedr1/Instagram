@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
   final String text;
   final Color textcolor, buttoncolor;
   final VoidCallback onpressed;
- final  Color? SideColor;
+  final Color? SideColor;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onpressed,
       child: Text(
         text,
-        style: TextStyle(color: textcolor, fontSize: 15),
+        style: TextStyle(color: textcolor, fontSize: 17),
       ),
     );
   }

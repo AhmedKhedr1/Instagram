@@ -20,7 +20,9 @@ class SignviewBody extends StatelessWidget {
               child: IconButton(
                 padding: EdgeInsets.all(0),
                 iconSize: 20,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios_new,
                   color: Colors.white,
@@ -71,7 +73,7 @@ class SignviewBody extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'Forgotten password?',
+                'Forgot password?',
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),

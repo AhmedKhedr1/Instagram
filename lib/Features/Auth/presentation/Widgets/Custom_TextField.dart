@@ -16,7 +16,7 @@ class Custom_TextField extends StatelessWidget {
               color: Colors.white, fontSize: 16,),
           decoration: InputDecoration(
             hintText: hinttext,
-            hintStyle: TextStyle(color: Color(0xffB7C4CC).withOpacity(0.9), fontSize: 15),
+            hintStyle: TextStyle(color: Color(0xffB7C4CC).withOpacity(0.9), fontSize: 17),
             contentPadding: EdgeInsets.all(18),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xff455056), width: 1),
