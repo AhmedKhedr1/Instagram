@@ -11,100 +11,93 @@ class SignviewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: ListView(
-          physics: BouncingScrollPhysics(),
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                padding: EdgeInsets.all(0),
-                iconSize: 20,
+      child: ListView(
+        physics: BouncingScrollPhysics(),
+        children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: IconButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
+                iconSize: 20,
                 icon: Icon(
                   Icons.arrow_back_ios_new,
                   color: Colors.white,
-                ),
-              ),
+                )),
+          ),
+          Padding(
+            padding: EdgeInsetsGeometry.only(top: 94),
+            child: SizedBox(
+              height: 68,
+              child: Image.asset(Assets.instagramlogo),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 94),
-              child: SizedBox(
-                height: 68,
-                child: Image.asset(Assets.instagramlogo),
-              ),
-            ),
-            SizedBox(
-              height: 100,
-            ),
-            Custom_TextField(
-              hinttext: 'Username,email address or mobile number',
-              keyboardType: TextInputType.emailAddress,
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Custom_TextField(
+          ),
+          SizedBox(
+            height: 100,
+          ),
+          Custom_TextField(
+              hinttext: 'Username,email address or mobile number ',
+              keyboardType: TextInputType.emailAddress),
+          SizedBox(
+            height: 12,
+          ),
+          Custom_TextField(
               hinttext: 'Password',
-              keyboardType: TextInputType.visiblePassword,
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: CustomButton(
-                text: 'Log in ',
+              keyboardType: TextInputType.visiblePassword),
+          SizedBox(
+            height: 12,
+          ),
+          Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+            child: CustomButton(
+                text: 'Log in',
                 textcolor: Colors.white,
-                buttoncolor: Color(0xff0064E0),
+                buttoncolor: Color(0xff0064e0),
                 onpressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
+                  Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
                       return Homeview();
                     },
                   ));
-                },
-              ),
+                }),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Center(
+            child: Text(
+              'Forgotten password ?',
+              style: TextStyle(color: Colors.white, fontSize: 16),
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Center(
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ),
-            SizedBox(
-              height: 180,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: CustomButton(
+          ),
+          SizedBox(
+            height: 180,
+          ),
+          Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+            child: CustomButton(
                 text: 'Create new account',
-                textcolor: Color(0xff6391D1),
+                textcolor: Color(0xff6391d1),
                 buttoncolor: KPrimaryColor,
-                SideColor: Color(0xff6391D1),
-                onpressed: () {},
-              ),
+                SideColor: Color(0xff6391d1),
+                onpressed: () {}),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          SizedBox(
+            width: 77,
+            height: 39,
+            child: Image.asset(
+              Assets.metalogo,
+              color: Color(0xffBCCAD3),
             ),
-            SizedBox(
-              height: 12,
-            ),
-            SizedBox(
-                width: 77,
-                height: 39,
-                child: Image.asset(
-                  Assets.metalogo,
-                  color: Color(0xffBCCAD3),
-                )),
-            SizedBox(
-              height: 34,
-            )
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 34,
+          )
+        ],
       ),
     );
   }
