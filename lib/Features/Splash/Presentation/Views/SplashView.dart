@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:instagram/Constant.dart';
 import 'package:instagram/Core/utils/Assets.dart';
-import 'package:instagram/Features/Auth/presentation/Views/SigninView.dart';
 import 'package:instagram/Features/Auth/presentation/Views/WelcomeView.dart';
 
 class Splashview extends StatefulWidget {
@@ -22,7 +21,7 @@ class _SplashviewState extends State<Splashview> {
       () {
         Navigator.push(context, MaterialPageRoute(
           builder: (context) {
-            return Signinview();
+            return Welcomeview();
           },
         ));
       },

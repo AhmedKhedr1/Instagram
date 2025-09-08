@@ -9,7 +9,7 @@ class Signinview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: KPrimaryColor,
-      body: SignviewBody(),
+      body: SiginviewBody(),
     );
   }
 }

@@ -17,3 +17,25 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+ // slivers: [
+        //   SliverToBoxAdapter(
+        //     child: Custom_AppBar(),
+        //   ),
+        //   SliverToBoxAdapter(
+        //     child: Stories_ListView(),
+        //   ),
+        //   SliverToBoxAdapter(
+        //     child: Divider(
+        //       color: Color(0xff25292E),
+        //     ),
+        //   ),
+        //   SliverList(
+        //       delegate: SliverChildBuilderDelegate(
+        //     childCount: posts.length,
+        //     (context, index) {
+        //       return Post(
+        //         postModel: posts[index],
+        //       );
+        //     },
+        //   ))
+        // ],

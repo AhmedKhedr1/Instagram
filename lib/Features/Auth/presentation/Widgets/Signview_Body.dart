@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Constant.dart';
+import 'package:instagram/Core/Widgets/metalogo.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_Button.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_TextField.dart';
 import 'package:instagram/Features/Home/Presentation/Views/HomeView.dart';
 
-class SignviewBody extends StatelessWidget {
-  const SignviewBody({super.key});
+class SiginviewBody extends StatelessWidget {
+  const SiginviewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView(
-        physics: BouncingScrollPhysics(),
         children: [
           Align(
             alignment: Alignment.topLeft,
@@ -86,17 +86,7 @@ class SignviewBody extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          SizedBox(
-            width: 77,
-            height: 39,
-            child: Image.asset(
-              Assets.metalogo,
-              color: Color(0xffBCCAD3),
-            ),
-          ),
-          SizedBox(
-            height: 34,
-          )
+          MetaLogo(),
         ],
       ),
     );
