@@ -51,16 +51,18 @@ class SiginviewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
             child: CustomButton(
-                text: 'Log in',
-                textcolor: Colors.white,
-                buttoncolor: Color(0xff0064e0),
-                onpressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return Homeview();
-                    },
-                  ));
-                }),
+              text: 'Log in',
+              textcolor: Colors.white,
+              buttoncolor: Color(0xff0064e0),
+              onpressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Homeview();
+                  },
+                ));
+              },
+              fontSize: 20,
+            ),
           ),
           SizedBox(
             height: 16,
@@ -77,11 +79,13 @@ class SiginviewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
             child: CustomButton(
-                text: 'Create new account',
-                textcolor: Color(0xff6391d1),
-                buttoncolor: KPrimaryColor,
-                SideColor: Color(0xff6391d1),
-                onpressed: () {}),
+              text: 'Create new account',
+              textcolor: Color(0xff6391d1),
+              buttoncolor: KPrimaryColor,
+              SideColor: Color(0xff6391d1),
+              onpressed: () {},
+              fontSize: 20,
+            ),
           ),
           SizedBox(
             height: 12,

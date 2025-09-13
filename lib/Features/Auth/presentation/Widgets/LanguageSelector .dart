@@ -8,7 +8,7 @@ class Languageselector extends StatefulWidget {
 }
 
 class _LanguageselectorState extends State<Languageselector> {
-  String selectedLanguage = "English (US)";
+  String selectedLang = "English (US)";
 
   final List<String> languages = [
     "English (US)",
@@ -21,7 +21,31 @@ class _LanguageselectorState extends State<Languageselector> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.topCenter,
+      alignment: Alignment.center,
+      child: DropdownButton<String>(
+        value: selectedLang,
+        dropdownColor: Colors.black,
+        underline: SizedBox(),
+        icon: Icon(
+          Icons.arrow_drop_down,
+          color: Colors.grey,
+          size: 36,
+        ),
+        style: TextStyle(color: Colors.grey, fontSize: 20),
+        items: languages.map(
+          (e) {
+            return DropdownMenuItem(
+              value: e,
+              child: Text(e),
+            );
+          },
+        ).toList(),
+        onChanged: (value) {
+          setState(() {
+            selectedLang = value!;
+          });
+        },
+      ),
     );
   }
 }

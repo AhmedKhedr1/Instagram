@@ -27,4 +27,5 @@ abstract class Assets {
   static const String postiamge4 = 'assets/images/postimage4.png';
   static const String comment_icon = 'assets/images/Comment.png';
   static const String Save_icon = 'assets/images/Save.png';
+  static const String welcomeimage = 'assets/images/Welcome_Image.png';
 }
