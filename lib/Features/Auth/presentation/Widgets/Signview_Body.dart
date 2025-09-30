@@ -5,6 +5,7 @@ import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_Button.dart';
 import 'package:instagram/Features/Auth/presentation/Widgets/Custom_TextField.dart';
 import 'package:instagram/Features/Home/Presentation/Views/HomeView.dart';
+import 'package:instagram/Features/Main/presentation/Views/MainView.dart';
 
 class SiginviewBody extends StatelessWidget {
   const SiginviewBody({super.key});
@@ -57,7 +58,7 @@ class SiginviewBody extends StatelessWidget {
               onpressed: () {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
-                    return Homeview();
+                    return MainView();
                   },
                 ));
               },
@@ -77,7 +78,7 @@ class SiginviewBody extends StatelessWidget {
             height: 180,
           ),
           Padding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 16), 
             child: CustomButton(
               text: 'Create new account',
               textcolor: Color(0xff6391d1),

@@ -28,4 +28,13 @@ abstract class Assets {
   static const String comment_icon = 'assets/images/Comment.png';
   static const String Save_icon = 'assets/images/Save.png';
   static const String welcomeimage = 'assets/images/Welcome_Image.png';
+  static const String Doticon = 'assets/images/Dot_icon.png';
+  static const String Homeicon = 'assets/icons/Home_icon.png';
+  static const String reelsicon = 'assets/icons/Reels_icon.png';
+  static const String Searchicon = 'assets/icons/Search_icon.png';
+  static const String Createicon = 'assets/icons/Create_icon.png';
+  static const String ActiveHomeicon = 'assets/icons/Active_Home_icon.png';
+  static const String ActiveReels = 'assets/icons/Active_Reels.png';
+  static const String ActiveSearchicon = 'assets/icons/Active_Search_icon.png';
+  static const String AddBost = 'assets/icons/Add_Bost.png';
 }

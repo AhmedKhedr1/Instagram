@@ -3,6 +3,7 @@ import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/Custom_AppBar.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/Post.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/Stories_ListView.dart';
+
 import 'package:instagram/Features/Home/data/models/post_Model.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -117,23 +118,21 @@ class HomeViewBody extends StatelessWidget {
         shrinkWrap: true,
         slivers: [
           SliverToBoxAdapter(
-            child: Custom_AppBar(),
+            child: Custom_AppBar(messagesCount: 5, HasNotification: true),
           ),
           SliverToBoxAdapter(
             child: Stories_ListView(),
           ),
           SliverToBoxAdapter(
             child: Divider(
-              color: Color(0xff25292E),
+              color: Color(0xff25292e),
             ),
           ),
           SliverList(
               delegate: SliverChildBuilderDelegate(
-            childCount: posts.length,
+                childCount: posts.length,
             (context, index) {
-              return Post(
-                postModel: posts[index],
-              );
+              return Post(postModel: posts[index]);
             },
           ))
         ],

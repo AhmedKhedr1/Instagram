@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/User_Avatar.dart';
+
 import 'package:instagram/Features/Home/data/models/Story_Model.dart';
 
 class Story extends StatelessWidget {
@@ -18,32 +19,32 @@ class Story extends StatelessWidget {
         Stack(
           children: [
             User_Avatar(
-              Fpadding: 3,
-              Spadding: 3,
-              imageraduis: 38,
-              colors: index == 0
-                  ? [Color(0xff00DA00), Color(0xff00DA00)]
-                  : [Color(0xffF4CC00), Color(0xffFF1557), Color(0xffCE03C8)],
-              Avatar_image: storymodel.image,
-            ),
+                Fpadding: 3,
+                Spadding: 3,
+                imageraduis: 38,
+                colors: index == 0
+                    ? [Color(0xff00da00), Color(0xff00da00)]
+                    : [Color(0xffF4cc00), Color(0xffFF1557), Color(0xffce03c8)],
+                Avatar_image: storymodel.image),
             Visibility(
-              visible: index == 0 ? true : false,
-              child: Positioned(
-                bottom: 0,
-                right: 0,
-                child: Image.asset(
-                  Assets.AddStory,
-                  width: 24,
-                  height: 24,
-                ),
-              ),
-            ),
+                visible: index == 0 ? true : false,
+                child: Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Image.asset(
+                      Assets.AddStory,
+                      width: 24,
+                      height: 24,
+                    )))
           ],
         ),
-        const SizedBox(height: 6),
+        SizedBox(
+          height: 6,
+        ),
         Text(
           index == 0 ? 'Your Story' : storymodel.username,
-          style: TextStyle(color: index == 0 ? Colors.grey : Colors.white),
+          style: TextStyle(
+              color: index == 0 ? Colors.grey : Colors.white, fontSize: 15),
         ),
       ],
     );

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class User_Avatar extends StatelessWidget {
@@ -6,7 +5,9 @@ class User_Avatar extends StatelessWidget {
     super.key,
     required this.Fpadding,
     required this.Spadding,
-    required this.imageraduis, required this.colors, required this.Avatar_image,
+    required this.imageraduis,
+    required this.colors,
+    required this.Avatar_image,
   });
   final double Fpadding, Spadding, imageraduis;
   final List<Color> colors;
@@ -28,7 +29,9 @@ class User_Avatar extends StatelessWidget {
         decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.black),
         child: CircleAvatar(
           radius: imageraduis,
-          backgroundImage: AssetImage(Avatar_image),
+          backgroundImage: AssetImage(
+            Avatar_image,
+          ),
         ),
       ),
     );

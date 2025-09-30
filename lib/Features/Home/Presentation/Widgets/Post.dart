@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/Features/Home/Presentation/Widgets/Likes_Bar.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/PostBars.dart';
+import 'package:instagram/Features/Home/Presentation/Widgets/Psot_description.dart';
+import 'package:instagram/Features/Home/Presentation/Widgets/comments_bar.dart';
 import 'package:instagram/Features/Home/data/models/post_Model.dart';
 
 class Post extends StatelessWidget {
@@ -24,37 +27,10 @@ class Post extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        PostBottomBar(
-          postModel: postModel,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Column(
-            children: [
-              RichText(
-                text: TextSpan(
-                  style: TextStyle(color: Colors.white, fontSize: 14),
-                  children: [
-                    TextSpan(
-                      text: postModel.user_name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    TextSpan(
-                      text: '  ',
-                    ),
-                    TextSpan(
-                      text: postModel.description,
-                    ),
-                    // TextSpan(
-                    //   text: " more",
-                    //   style: TextStyle(color: Colors.grey),
-                    // ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        )
+        PostBottomBar(postModel: postModel),
+        Likes_Bar(postModel: postModel),
+        Psot_description(postModel: postModel),
+        CommentText()
       ],
     );
   }

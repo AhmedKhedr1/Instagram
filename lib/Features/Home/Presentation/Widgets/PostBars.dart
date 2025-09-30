@@ -15,26 +15,28 @@ class PostTopBar extends StatelessWidget {
     return Row(
       children: [
         User_Avatar(
-          Fpadding: 1.5,
-          Spadding: 3,
-          imageraduis: 16,
-          colors: [Color(0xffF4CC00), Color(0xffFF1557), Color(0xffCE03C8)],
-          Avatar_image: postModel.user_image,
-        ),
+            Fpadding: 1.5,
+            Spadding: 3,
+            imageraduis: 16,
+            colors: [Color(0xfff4cc00), Color(0xffff1557), Color(0xffce03c8)],
+            Avatar_image: postModel.user_image),
         SizedBox(
           width: 8,
         ),
         Text(
           postModel.user_name,
-          style: Styless.headlineRegular.copyWith(fontWeight: FontWeight.w500),
+          style: Styless.headlineRegular
+              .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
         ),
         Spacer(),
-        Image.asset(
-          Assets.options_icon,
-          color: Colors.white,
-          height: 24,
-          width: 24,
-        )
+        RotatedBox(
+            quarterTurns: 1,
+            child: Image.asset(
+              Assets.options_icon,
+              color: Colors.white,
+              width: 24,
+              height: 24,
+            ))
       ],
     );
   }
@@ -64,65 +66,65 @@ class _PostBottomBarState extends State<PostBottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {
-              setState(() {
-                if (IsLiked) {
-                  likesCount--;
-                } else {
-                  likesCount++;
-                }
-                IsLiked = !IsLiked;
-              });
-            },
-            icon: Icon(
-              IsLiked ? Icons.favorite : Icons.favorite_border_outlined,
-              color: IsLiked ? Colors.red : Colors.white,
-              size: 24,
-            )),
-        Text(
-          likesCount.toString(),
-          style: Styless.calloutBold,
+    return Row(children: [
+      IconButton(
+          onPressed: () {
+            setState(() {
+              if (IsLiked) {
+                likesCount--;
+              } else {
+                likesCount++;
+              }
+              IsLiked = !IsLiked;
+            });
+          },
+          icon: Icon(
+            IsLiked ? Icons.favorite : Icons.favorite_border_outlined,
+            color: IsLiked ? Colors.red : Colors.white,
+            size: 28,
+          )),
+      Text(
+        likesCount.toString(),
+        style: Styless.calloutBold.copyWith(fontSize: 16),
+      ),
+      SizedBox(
+        width: 12,
+      ),
+      Padding(
+        padding: EdgeInsetsGeometry.only(right: 4),
+        child: Image.asset(
+          Assets.comment_icon,
+          color: Colors.white,
+          width: 28,
+          height: 28,
         ),
-        SizedBox(
-          width: 12,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 4),
-          child: Image.asset(
-            Assets.comment_icon,
-            color: Colors.white,
-          ),
-        ),
-        Text(
-          widget.postModel.NumOfComments,
-          style: Styless.calloutBold,
-        ),
-        SizedBox(
-          width: 12,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 4),
-          child: Image.asset(
-            Assets.Direct_message,
-            color: Colors.white,
-          ),
-        ),
-        Text(
-          widget.postModel.NumOfSend,
-          style: Styless.calloutBold,
-        ),
-        Spacer(),
-        Image.asset(
-          Assets.Save_icon,
+      ),
+      Text(
+        widget.postModel.NumOfComments,
+        style: Styless.calloutBold.copyWith(fontSize: 16),
+      ),
+      SizedBox(
+        width: 12,
+      ),
+      Padding(
+        padding: EdgeInsetsGeometry.only(right: 4),
+        child: Image.asset(
+          Assets.Direct_message,
           color: Colors.white,
         ),
-        SizedBox(
-          width: 12,
-        )
-      ],
-    );
+      ),
+      Text(
+        widget.postModel.NumOfSend,
+        style: Styless.calloutBold.copyWith(fontSize: 16),
+      ),
+      Spacer(),
+      Image.asset(
+        Assets.Save_icon,
+        color: Colors.white,
+      ),
+      SizedBox(
+        width: 12,
+      )
+    ]);
   }
 }

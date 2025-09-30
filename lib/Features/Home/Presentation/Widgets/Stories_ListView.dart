@@ -25,21 +25,18 @@ class Stories_ListView extends StatelessWidget {
     ];
 
     return SizedBox(
-        height: 134,
-        width: double.infinity,
-        child: ListView.builder(
-          shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
-          itemCount: stories.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(4),
-              child: Story(
-                index: index,
-                storymodel: stories[index],
-              ),
-            );
-          },
-        ));
+      width: double.infinity,
+      height: 134,
+      child: ListView.builder(
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        itemCount: stories.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.all(4),
+            child: Story(index: index, storymodel: stories[index]),
+          );        
+      },),
+    );
   }
 }
