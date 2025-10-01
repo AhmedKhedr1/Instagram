@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Home/Presentation/Views/HomeView.dart';
 import 'package:instagram/Features/Home/Presentation/Widgets/User_Avatar.dart';
-import 'package:instagram/Profile_View.dart';
+import 'package:instagram/Features/Profile/Presentation/Views/Profile_view.dart';
 import 'package:instagram/Reels_View.dart';
 import 'package:instagram/Search_view.dart';
 
@@ -20,8 +20,8 @@ class _MainViewState extends State<MainView> {
     Homeview(),
     SearchView(),
     ReelsView(),
-    ProfileView(),
-    ProfileView(),
+    ReelsView(),
+    profileview()
   ];
 
   @override
