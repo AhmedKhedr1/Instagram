@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ProfileStat extends StatelessWidget {
@@ -18,9 +17,11 @@ class ProfileStat extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        Text(Label,
-            style: TextStyle(
-                fontSize: 15, color: Colors.white, fontWeight: FontWeight.w400))
+        Text(
+          Label,
+          style: TextStyle(
+              fontSize: 15, color: Colors.white, fontWeight: FontWeight.w400),
+        )
       ],
     );
   }
