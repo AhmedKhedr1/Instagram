@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Features/Home/Presentation/Widgets/Home_View_Body.dart';
+import 'package:instagram/Features/Profile/Presentation/Widgets/Profile_view_body.dart';
 
 class profileview extends StatelessWidget {
   const profileview({super.key});
@@ -8,7 +8,7 @@ class profileview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff0C0F14),
-      body: HomeViewBody(),
+      body: ProfileViewBody(),
     );
   }
 }

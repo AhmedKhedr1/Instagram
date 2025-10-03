@@ -37,4 +37,6 @@ abstract class Assets {
   static const String ActiveReels = 'assets/icons/Active_Reels.png';
   static const String ActiveSearchicon = 'assets/icons/Active_Search_icon.png';
   static const String AddBost = 'assets/icons/Add_Bost.png';
+  static const String menu = 'assets/icons/Menu.png';
+  static const String threads = 'assets/icons/Threads.png';
 }
