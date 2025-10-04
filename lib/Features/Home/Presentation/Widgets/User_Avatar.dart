@@ -28,6 +28,7 @@ class User_Avatar extends StatelessWidget {
         padding: EdgeInsets.all(Spadding),
         decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.black),
         child: CircleAvatar(
+          backgroundColor: Color(0xff0C1014),
           radius: imageraduis,
           backgroundImage: AssetImage(
             Avatar_image,

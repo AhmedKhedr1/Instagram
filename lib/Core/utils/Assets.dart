@@ -39,4 +39,8 @@ abstract class Assets {
   static const String AddBost = 'assets/icons/Add_Bost.png';
   static const String menu = 'assets/icons/Menu.png';
   static const String threads = 'assets/icons/Threads.png';
+  static const String links = 'assets/icons/Link.png';
+  static const String plus = 'assets/images/Plus.png';
+  static const String Highlight1 = 'assets/images/Highlight_1.png';
+  static const String Highlight2 = 'assets/images/Highlight_2.png';
 }

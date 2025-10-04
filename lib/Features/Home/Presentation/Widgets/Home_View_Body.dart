@@ -130,7 +130,7 @@ class HomeViewBody extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildBuilderDelegate(
-                childCount: posts.length,
+            childCount: posts.length,
             (context, index) {
               return Post(postModel: posts[index]);
             },
