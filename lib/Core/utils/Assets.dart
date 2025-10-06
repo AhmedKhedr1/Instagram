@@ -40,7 +40,18 @@ abstract class Assets {
   static const String menu = 'assets/icons/Menu.png';
   static const String threads = 'assets/icons/Threads.png';
   static const String links = 'assets/icons/Link.png';
+  static const String Highlight1 = 'assets/images/Highlight1.png';
+  static const String Highlight2 = 'assets/images/Highlight2.png';
   static const String plus = 'assets/images/Plus.png';
-  static const String Highlight1 = 'assets/images/Highlight_1.png';
-  static const String Highlight2 = 'assets/images/Highlight_2.png';
+  static const String Gridicon = 'assets/icons/Grid.png';
+  static const String Starsicon = 'assets/icons/Stars.png';
+  static const String Tagicon = 'assets/icons/Tag.png';
+  static const String userpost1 = 'assets/images/userpost1.jpg';
+  static const String userpost2 = 'assets/images/userpost2.jpg';
+  static const String userpost3 = 'assets/images/userpost3.jpg';
+  static const String userpost4 = 'assets/images/userpost4.jpg';
+  static const String userpost5 = 'assets/images/userpost5.jpg';
+  static const String userpost6 = 'assets/images/userpost6.jpg';
+    static const String userpost7 = 'assets/images/userpost7.jpg';
+
 }

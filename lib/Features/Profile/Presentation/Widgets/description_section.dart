@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:instagram/Core/utils/Assets.dart';
 import 'package:instagram/Features/Profile/Presentation/Widgets/HighlightsSection%20.dart';
 import 'package:instagram/Features/Profile/Presentation/Widgets/Links.dart';
 import 'package:instagram/Features/Profile/Presentation/Widgets/ProfileActionButtons.dart';
@@ -8,10 +9,7 @@ class description_section extends StatelessWidget {
   description_section({
     super.key,
   });
-  final List<String> Highlight = [
-    Assets.Highlight1,
-    Assets.Highlight2,
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -57,7 +55,11 @@ class description_section extends StatelessWidget {
             height: 12,
           ),
           ProfileActionButtons(),
-          // HighlightsSection()
+          SizedBox(
+            height: 16,
+          ),
+         HighlightsSection(),
+         SizedBox(height: 12,)
         ],
       ),
     );

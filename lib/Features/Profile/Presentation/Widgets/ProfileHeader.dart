@@ -12,12 +12,21 @@ class ProfileHeader extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
-          Text('Ahmed_khedr',style: TextStyle(
-            color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold
-          ),),
-          SizedBox(width: 4,),
-          RotatedBox(quarterTurns: 3,
-          child: Icon(Icons.arrow_back_ios,color: Colors.white,size: 16,),
+          Text(
+            'Ahmed_khedr',
+            style: TextStyle(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            width: 4,
+          ),
+          RotatedBox(
+            quarterTurns: 3,
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+              size: 16,
+            ),
           ),
           Spacer(),
           icon_bar()
@@ -26,31 +35,6 @@ class ProfileHeader extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class icon_bar extends StatelessWidget {
   const icon_bar({

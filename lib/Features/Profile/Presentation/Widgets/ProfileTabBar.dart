@@ -1,20 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/Features/Profile/Presentation/Widgets/Profile_view_body.dart';
-
-class profileview extends StatelessWidget {
-  const profileview({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff0C0F14),
-      body: ProfileViewBody(),
-    );
-  }
-}
-/*
-
-import 'package:flutter/material.dart';
 import 'package:instagram/Core/utils/Assets.dart';
 
 class ProfileTabBar extends StatelessWidget {
@@ -44,18 +28,17 @@ class ProfileTabBar extends StatelessWidget {
                     color: index == 0 ? null : Colors.grey,
                   ),
                 ),
-                SizedBox(height: 6),
+                SizedBox(
+                  height: 6,
+                ),
                 Container(
                   height: 1,
                   width: 92,
-                  color: selectedindex == index
-                      ? Colors.white
-                      : Colors.transparent,
-                ),
+                  color: selectedindex==index?Colors.white:Colors.transparent,
+                )
               ],
             );
           },
         ));
   }
 }
- */
